@@ -5,20 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
-        tailwind.config = {
-          theme: {
-            extend: {
-              colors: {
-                web_blue: '#0086FF',
-                web_black: '#1B1B1B',
-                web_grey: '#333333',
-                web_grey2: '#858585',
-                web_grey2: '#3E454A',
-              }
-            }
-          }
-        }
-      </script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              web_blue: "#0086FF",
+              web_black: "#1B1B1B",
+              web_grey: "#333333",
+              web_grey2: "#858585",
+              web_grey3: "#3E454A",
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -31,23 +32,360 @@
       href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Merienda:wght@700&family=Poppins&family=Rubik:wght@300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
+
+    <script src="script.js" defer></script>
+
     <title>KCD 2024</title>
   </head>
-  <body>
+
+  <body class="p-1">
     <header class="bg-white">
+      <button
+        class="mobile-nav-toggle"
+        aria-controls="primary-navigation"
+        aria-expanded="false"
+      >
+        =
+        <!-- <img src="/asset/menu.png" alt="" /> -->
+      </button>
+
       <nav>
-        <img src="" alt="" />
-        <ul>
-          <li>ABOUT US</li>
-          <li>SPEAKERS</li>
-          <li>SCCHEDLE</li>
-          <li>VENUE</li>
-          <li>SPONSORS & PARTNERS</li>
-          <li>ORGANIZERS & VOLUNTEERS</li>
-          <li>FAQ</li>
+        <img
+          src="/assets/Logo-black.png"
+          alt="kcd 2024 logo"
+          class="w-[120px] h-[90px]"
+        />
+        <ul
+          id="primary-navigation"
+          data-visible="false"
+          class="primary-navigation flex gap-4"
+        >
+          <li class="hover:font-semibold">
+            <a href="index.html">ABOUT US</a>
+          </li>
+          <li class="hover:font-semibold">
+            <a href="index.html">SPEAKERS</a>
+          </li>
+          <li class="hover:font-semibold">
+            <a href="index.html">SCHEDULE</a>
+          </li>
+          <li class="hover:font-semibold">
+            <a href="index.html">VENUE</a>
+          </li>
+          <li class="hover:font-semibold">
+            <a href="index.html">SPONSORS & PARTNERS</a>
+          </li>
+          <li class="hover:font-semibold">
+            <a href="index.html">ORGANIZERS & VOLUNTEERS</a>
+          </li>
+          <li class="hover:font-semibold">
+            <a href="index.html">FAQ</a>
+          </li>
+          <button class="font-semibold p-2 bg-web_blue rounded-lg">
+            Become a sponsor
+          </button>
         </ul>
-        <button>Become a sponsor</button>
       </nav>
     </header>
+
+    <!-- hero section -->
+    <section class="bg-red-800 relative">
+      <img
+        src="/assets/hero-bg-blr.png"
+        alt="hero backgroung picture blr"
+        class="hidden"
+      />
+      <img src="/assets/hero-bg.png" alt="hero backgroung picture" />
+
+      <div class="absolute top-0 left-5 text-white space-y-2">
+        <div class="text-2xl">
+          <h1>Dhaka Welcomes the</h1>
+          <h1>Future of Tech</h1>
+          <h1>KCD 2024!</h1>
+        </div>
+
+        <div
+          class="flex gap-2 bg-web_grey3 rounded-lg p-2 justify-center text-xs"
+        >
+          <div class="flex gap-1">
+            <img src="/assets/calendar-check.png" alt="" class="w-4 h-4" />
+            <h1>11th, MAY 2024</h1>
+          </div>
+
+          <div class="flex gap-1">
+            <img src="/assets/location 4.png" alt="" class="w-4 h-4" />
+            <h1>Le Méridien Dhaka</h1>
+          </div>
+        </div>
+
+        <div class="flex text-xs gap-2 bg-web_blue rounded-lg p-2 w-36">
+          <img src="/assets/ticket.png" alt="" class="w-4 h-4" />
+          <h1>Book your ticket</h1>
+        </div>
+      </div>
+    </section>
+
+    <!-- Welcome to kcd dhaka -->
+    <section class="py-10">
+      <h1 class="text-lg font-bold text-center mb-10">Welcome to KCD Dhaka</h1>
+      <img src="/assets/dhaka-bg.png" alt="" />
+      <p class="mt-10 text-center">
+        Join us at KCD Dhaka on May 11th, 2024, for a day of cutting-edge talks
+        and networking. Whether you're a developer, operations expert, or IT
+        professional, this is your chance to shape the future of cloud-native
+        technology. Supported by the CNCF, mark your calendars and let's
+        innovate together in Dhaka, Bangladesh!
+      </p>
+    </section>
+
+    <!-- Keynote Speakers -->
+    <section class="my-5">
+      <h1 class="text-xl mb-5 font-bold">Keynote Speakers</h1>
+      <div class="grid grid-cols-2 gap-4">
+        <div class="text-center space-y-1">
+          <img src="/assets/avator-img.png" alt="" />
+          <h1 class="text-xl font-semibold">Juaeir Islam</h1>
+          <p class="text-xs font-semibold">Co-founder & CTO</p>
+          <p class="text-xs font-bold">Mashlabz</p>
+        </div>
+        <div class="text-center space-y-1">
+          <img src="/assets/avator-img.png" alt="" />
+          <h1 class="text-xl font-semibold">Juaeir Islam</h1>
+          <p class="text-xs font-semibold">Co-founder & CTO</p>
+          <p class="text-xs font-bold">Mashlabz</p>
+        </div>
+        <div class="text-center space-y-1">
+          <img src="/assets/avator-img.png" alt="" />
+          <h1 class="text-xl font-semibold">Juaeir Islam</h1>
+          <p class="text-xs font-semibold">Co-founder & CTO</p>
+          <p class="text-xs font-bold">Mashlabz</p>
+        </div>
+        <div class="text-center space-y-1">
+          <img src="/assets/avator-img.png" alt="" />
+          <h1 class="text-xl font-semibold">Juaeir Islam</h1>
+          <p class="text-xs font-semibold">Co-founder & CTO</p>
+          <p class="text-xs font-bold">Mashlabz</p>
+        </div>
+        <div class="text-center space-y-1">
+          <img src="/assets/avator-img.png" alt="" />
+          <h1 class="text-xl font-semibold">Juaeir Islam</h1>
+          <p class="text-xs font-semibold">Co-founder & CTO</p>
+          <p class="text-xs font-bold">Mashlabz</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Schedule Table-->
+    <section>
+      <main role="region" aria-labelledby="Cap1" tabindex="0">
+        <table id="Books" class="table-auto">
+          <caption id="Cap1">
+            Schedule
+          </caption>
+          <thead>
+            <tr>
+              <th>TIME</th>
+              <th>EVENT ACTIVITIES</th>
+              <th>ATTENDIES</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>8:00 am</td>
+              <td>Registration</td>
+            </tr>
+            <tr>
+              <td>9:00 AM - 9:30 AM</td>
+              <td>Welcome Note/Short Introduction to KCD Dhaka</td>
+              <td>Humble Devassy Chirammal (VMware by Broadcom)</td>
+            </tr>
+            <tr>
+              <td>9:30 AM - 10:30 AM</td>
+              <td>Dhaka's IT Ecosystem and Community Contribution</td>
+              <td>
+                Susanth Kurunthil (CEO Infopark, Kochi & Cyberpark Kozhikode)
+              </td>
+            </tr>
+            <tr>
+              <td>10:30 AM - 11:00 AM</td>
+              <td>
+                Mainframe to GenAI - Evolving technologies and customer use
+                cases
+              </td>
+              <td>
+                Susanth Kurunthil (CEO Infopark, Kochi & Cyberpark Kozhikode)
+              </td>
+            </tr>
+            <tr>
+              <td>11:00 AM - 12:00 PM</td>
+              <td>CNCF Updates</td>
+              <td>Sudheesh C Sudhakaran (VMware by Broadcom)</td>
+            </tr>
+            <tr>
+              <td>12:00 PM - 1:00 PM</td>
+              <td>
+                Unleashing the Power of Full Stack monitoring in Kubernetes
+              </td>
+              <td>CNCF Ambassadors</td>
+            </tr>
+            <tr>
+              <td>1:00 PM - 2:00 PM</td>
+              <td>Red Hat and Opensource</td>
+              <td>Akash T K (ZOHO)</td>
+            </tr>
+            <tr>
+              <td>2:00 PM - 3:00 PM</td>
+              <td>Prodevans Transforms Industry using CNCF Tools & Services</td>
+              <td>Rahul Sreenivasan (Red Hat)</td>
+            </tr>
+            <tr>
+              <td>3:00 PM - 3:30 PM</td>
+              <td>Building a Kubernetes Learning Community</td>
+              <td>Mumshad Mannambeth (KodeKloud)</td>
+            </tr>
+            <tr>
+              <td>3:30 PM - 4:30 PM</td>
+              <td>Coffee Break</td>
+            </tr>
+            <tr>
+              <td>4:30 PM - 5:30 PM</td>
+              <td>Kubernetes Automation with Generative AI</td>
+              <td>Ambily K K (GitHub)</td>
+            </tr>
+            <tr>
+              <td>5:30 PM - 6:00 PM</td>
+              <td>Kubernetes: A Three Ringed Circus</td>
+              <td>Ram Iyengar (Cloud Foundry)</td>
+            </tr>
+            <tr>
+              <td>6:00 PM - 7:00 PM</td>
+              <td>
+                Turbocharging Databases KEDA's Dynamic Scaling for SQL & NoSQL
+                Queries
+              </td>
+              <td>
+                Ram Iyengar (Cloud Foundry) Rahul Jadhav (AccuKnox), Amel
+                Mathai (Red Hat India & South Asia) Manoj Krishnan (VMware by
+                Broadcom)
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </main>
+    </section>
+
+    <!-- sponsor & partners -->
+    <section>
+      <h1>Sponsors & Partners</h1>
+      <div class="grid grid-cols-2 gap-4">
+        <img src="assets/sponsors&partner/thirty_madison_1.svg.svg" alt="" />
+        <img src="assets/sponsors&partner/classpass_white_1.svg.svg" alt="" />
+        <img src="assets/sponsors&partner/Merkle_white_1.svg.svg" alt="" />
+        <img src="assets/sponsors&partner/Slise_white_1.svg.svg" alt="" />
+        <img src="assets/sponsors&partner/bevi_1.svg.svg" alt="" />
+        <img src="assets/sponsors&partner/ey_white_1.svg.svg" alt="" />
+        <img src="assets/sponsors&partner/coca_cola_white_1.svg.svg" alt="" />
+        <img src="assets/sponsors&partner/seat_geek_white_1.svg.svg" alt="" />
+        <img src="assets/sponsors&partner/postman_white_1.svg.svg" alt="" />
+        <img src="assets/sponsors&partner/costa.svg.svg" alt="" />
+        <img src="assets/sponsors&partner/dealcloud_black.svg.svg" alt="" />
+        <img src="assets/sponsors&partner/blackboard.svg.svg" alt="" />
+        <img src="assets/sponsors&partner/pwc_tYmOmQ7.svg.svg" alt="" />
+        <img src="assets/sponsors&partner/Brex.svg.svg" alt="" />
+        <img src="assets/sponsors&partner/paypal.svg.svg" alt="" />
+        <img src="assets/sponsors&partner/vimeo.svg.svg" alt="" />
+        <img src="assets/sponsors&partner/ibm.svg fill.svg" alt="" />
+        <img src="assets/sponsors&partner/mt._sinai.svg.svg" alt="" />
+        <img src="assets/sponsors&partner/grubhub.svg.svg" alt="" />
+        <img src="assets/sponsors&partner/Crown_Castle.svg.svg" alt="" />
+      </div>
+    </section>
+
+    <!-- why become a sponsor -->
+    <section>
+      <div>
+        <h1>Why become a sponsor?</h1>
+        <p>
+          Sponsor KCD events for prime brand exposure, networking, and
+          credibility in Cloud Native tech. Join community-driven gatherings
+          endorsed by CNCF for education, collaboration, and growth.
+        </p>
+        <div>
+          <a href="#">
+            <img src="assets/file-download.svg" alt="" />
+            <h1>Download Event Deck</h1>
+          </a>
+          <a href="#">
+            <h1>Become a sponsor</h1>
+          </a>
+        </div>
+      </div>
+      <img src="assets/Jigsaw_Puzzle.png" alt="" />
+    </section>
+
+    <!-- venue -->
+    <section>
+      <img src="assets/venue-1.png" alt="" />
+      <img src="assets/venue-2.png" alt="" />
+      <img src="assets/venue-3.png" alt="" />
+      <img src="assets/venue-4.png" alt="" />
+      <img src="assets/venue-5.png" alt="" />
+      <img src="assets/venue-6.png" alt="" />
+    </section>
+
+    <!-- Faq's -->
+    <section>
+      <h1>Faq's</h1>
+      <div>
+        <h1>Are Kubernetes Community Days limited to Kubernetes?</h1>
+        <p>+</p>
+      </div>
+      <div>
+        <h1>
+          Can I transfer my registration to another person if I can’t attend?
+        </h1>
+        <p>+</p>
+      </div>
+      <div>
+        <h1>Why should attendees pay for the ticket?</h1>
+        <p>-</p>
+        <p>
+          Kubernetes Community Days (KCDs) are community-organized,
+          not-for-profit events. Organizing a large-scale, in-person event like
+          KCD Dhaka involves considerable cost. Sponsors provide partial
+          financial support for the event. The remaining cost is covered by
+          tickets.
+        </p>
+      </div>
+      <div>
+        <h1>What are the benefits of attending KCD Dhaka?</h1>
+        <p>+</p>
+      </div>
+      <div>
+        <h1>Is there any cancellation or refund policy?</h1>
+        <p>+</p>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer>
+      <div>
+        <p>KCD Dhaka 2024 | May 11th, 2024 | Dhaka, Bangladesh</p>
+        <div>
+          <a href="#"><img src="assets/instagram.svg" alt="" /></a>
+          <a href="#"><img src="assets/linkedln.svg" alt="" /></a>
+          <a href="#"><img src="assets/facebook.svg" alt="" /></a>
+          <a href="#"><img src="assets/twitter.svg" alt="" /></a>
+          <a href="#"><img src="assets/slack.svg" alt="" /></a>
+        </div>
+      </div>
+      <div>
+        <div>
+          <h1>Get your ticket</h1>
+          <img src="assets/arrow-up-right.svg" alt="" />
+        </div>
+        <img src="assets/get-your-ticket-bg.png" alt="" />
+      </div>
+    </footer>
   </body>
 </html>
