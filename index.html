@@ -17,10 +17,9 @@
             },
           },
 
-          screens: {
-            m_xs: "320px",
-            m_sm: "375px",
-            m_md: "425px",
+          fontFamily: {
+            "ibm-plex-mono": ['"IBM Plex Mono"', "system-ui"],
+            "dm-sans": ['"DM Sans"', "system-ui"],
           },
         },
       };
@@ -44,7 +43,7 @@
     <title>KCD 2024</title>
   </head>
 
-  <body class="p-1">
+  <body class="p-2">
     <header class="bg-white">
       <button
         class="mobile-nav-toggle"
@@ -283,14 +282,14 @@
     <!-- sponsor & partners -->
     <section class="my-10">
       <h1 class="text-2xl font-bold pb-6">Sponsors & Partners</h1>
-      <div class="grid grid-cols-3">
+      <div class="grid grid-cols-2">
         <div class="flex iten-center justify-center border-[1px] p-2">
           <img src="assets/sponsors&partner/thirty_madison_1.svg.svg" alt="" />
         </div>
-        <div class="flex iten-center justify-center border-[1px] p-2 ">
+        <div class="flex iten-center justify-center border-[1px] p-2">
           <img src="assets/sponsors&partner/classpass_white_1.svg.svg" alt="" />
         </div>
-        <div class="flex iten-center justify-center border-[1px] p-2 ">
+        <div class="flex iten-center justify-center border-[1px] p-2">
           <img src="assets/sponsors&partner/Merkle_white_1.svg.svg" alt="" />
         </div>
         <div class="flex iten-center justify-center border-[1px] p-2">
@@ -350,15 +349,15 @@
     <!-- why become a sponsor -->
     <section class="my-5">
       <div>
-        <h1>Why become a sponsor?</h1>
-        <p>
+        <h1 class="font-ibm-plex-mono text-2xl font-bold mb-5">Why become a sponsor?</h1>
+        <p class="font-dm-sans">
           Sponsor KCD events for prime brand exposure, networking, and
           credibility in Cloud Native tech. Join community-driven gatherings
           endorsed by CNCF for education, collaboration, and growth.
         </p>
-        <div>
-          <a href="#">
-            <img src="assets/file-download.svg" alt="" />
+        <div class="mt-5 flex text-sm justify-between font-ibm-plex-mono text- font-semibold">
+          <a href="#" class="flex">
+            <img src="assets/file-download.svg" alt="" width="20px"/>
             <h1>Download Event Deck</h1>
           </a>
           <a href="#">
